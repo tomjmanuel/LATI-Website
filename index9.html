@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>LATI @ VUIIS</title>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- My Custom CSS -->
+        <link rel="stylesheet" href="style7.css">
+        <!-- Scrollbar Custom CSS -->
+        <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"-->
+		<link rel="stylesheet" href="jquery.mCustomScrollbar.css">
+		<!-- Animate .css -->
+		<link rel="stylesheet" href="animate.css">
+    </head>
+    <body onscroll="checkLoc()">
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <a href="https://www.vanderbilt.edu/"><img src="img/vu.gif" class="img-responsive"></a>
+                </div>
+
+                <ul class="list-unstyled components">
+					<li><a onclick="navigate('#whole-page', 10)"><i id="h" class="glyphicon glyphicon-record"></i> LATI @ VUIIS</a></li>
+                    <li><a onclick="navigate('#projectline', 1)"><i id="r" class="glyphicon glyphicon-record"></i> Research</a></li>
+					<li><a onclick="navigate('#pubsline', 2)"><i id="p" class="glyphicon glyphicon-record"></i> Publications</a></li>
+                    <li><a onclick="navigate('#teamline', 3)"><i id="t" class="glyphicon glyphicon-record"></i> People</a></li>
+                    <li><a onclick="navigate('#res_line', 4)"><i id="r2" class="glyphicon glyphicon-record"></i> Resources</a></li>
+					<li><a onclick="navigate('#opp_line', 5)"><i id="o" class="glyphicon glyphicon-record"></i> Opportunities</a></li>
+					
+					<!--li><a href="#">Links</a></li-->
+					<li><a href="https://vuiis.vumc.org/" target="_blank">VUIIS</a></li>
+                </ul>
+				<p style="margin-top: 20px">Laboratory of Acoustic Therapy and Imaging</p>
+				<p style="margin-top: 10px">VUMC Institute of Imaging Sciences</p>
+				<p>1161 21st Ave South</p>
+				<p>MCN North A4314</p>
+				<p>Nashville, TN 37232-2310</p>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+				<button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" style="z-index: 99" onclick="tog_nav()">
+					<i class="glyphicon glyphicon-align-justify"></i>
+				</button>
+
+				<div id="whole-page">
+					<img src="img/coverWide.jpg" class="img-responsive" id="cover">
+				
+					<!-- Research Projects ------------------------------------------------->
+					<div class="line" id="projectline"></div>
+					<h2 class="sect">Research</h2>
+
+
+					
+					<div class="container-fluid" id="project">
+						<div class="row">
+							<div class="column" id="ctext">
+								<h3 style="background-color:#edd363; text-align:center; color:black; padding:5px; border-radius:5px;">MR-guided focused ultrasound</h3>
+								<p style="text-align:justify">Ultrasound has the ability to focus energy to a small point beyond the skull and is being widely explored by researchers as a tool for non-invasive neuromodulation. When combined with magnetic resonance imaging (MRI), focused ultrasound (FUS) can be precisely guided while the effects of FUS can be visualized at the network level using fMRI. We have developed systems to apply image-guided FUS neuromodulation in the MRI environment while imaging functional activity. These systems use optical tracking to guide FUS neuromodulation, and we have created transducer arrays for steerable FUS neuromodulation. The position of the probe can be detected using MR acoustic radiation force imaging, which is capable of detecting micron-scale displacements caused by the ultrasound beam in the brain. We have used these methods to modulate the somatosensory network in non-human primates, demonstrating that MRI-guided FUS is capable of exciting precise targets in somatosensory areas 3a/3b, causing downstream activations in off-target brain regions within the circuit which we simultaneously detected with fMRI.</p>
+								</div>
+							<div class="column" id="fig6">
+								<h5>Integrating ultrasound into MRI</h5>
+								<img src="img/megan.jpg" width="300" height="270">
+								<img src="img/sumeeth.jpg" width="270" height="270">
+							</div>	
+						</div>
+					</div>
+					<div class="container-fluid" id="project">
+						<div class="row">
+							<div class="column" id="ctext2">
+								<h3 style="background-color:#edd363; text-align:center; color:black; padding:5px; border-radius:5px;">Ultrasound-guided drug delivery</h3>
+								<p style="text-align:justify">Microbubble contrast agents are micron sized lipid-encapsulated bubbles that oscillate in response to ultrasound. They are used clinically to enhance flow imaging, while research applications have explored how to use these oscillating bubbles to locally deliver drugs or genes for therapeutic purposes. We have developed methods to image microbubbles while simultaneously applying therapy. This powerful ability enables an all-in-one method to visualize and treat diseases. We are currently leveraging this technology in anti-cancer applications to map tumor vasculature while apply therapeutic ultrasound pulses to elicit an immune response. This work aims to expand the reach of immunotherapy to cancers that are not currently responsive.</p>
+							</div>
+							<div class="column" id="fig3">
+								<h5>Imaging and treating tumors with microbubbles</h5>
+								<video controls loop><source src="img/fapi_tumor.mp4" type="video/mp4"></video> 
+								<img src="img/jiro2.jpg" width="300" height="280">
+							</div>	
+						</div>
+					</div>					
+
+					<div class="container-fluid" id="project">
+						<div class="row">
+							<div class="column" id="ctext">
+								<h3 style="background-color:#edd363; text-align:center; color:black; padding:5px; border-radius:5px;">Next generation ultrasound neuromodulation</h3>
+								<p style="text-align:justify">Because ultrasound can deliver drugs and genetic vectors, it has high potential for use in the brain beyond its direct ability to modulate neurons. In collaboration with the <a href="https://airan-lab.stanford.edu/" target="_blank">Airan Laboratory</a>, we are developing methods to deliver drug-loaded nanoparticles capable of releasing the anesthetic Propofol using focused ultrasound to inhibit activity in neurons in the acoustic focus. We are using image-guidance to target drug release to specific locations in the brain, enabling unprecedented exploration of brain function. </p>
+								<p style="text-align:justify">The delivery of genetic vectors with ultrasound provides another molecular method of ultrasound neuromodulation. In collaboration with the <a href="http://shapirolab.caltech.edu/" target="_blank">Shapiro laboratory at Cal Tech</a>, we are using ultrasound to open the blood brain barrier to deliver genes encoding for a specific receptor to neurons in the brain. This receptor is only capable of binding to a specific drug, which, when introduced, will inhibit any neurons bearing the receptor. This combination, known as a <a href="https://en.wikipedia.org/wiki/Receptor_activated_solely_by_a_synthetic_ligand" target="_blank">designer-receptor designer-drug</a>, can then be used to modulate specific regions of the brain solely by introducing the drug to the body. This method has the benefit of spatial and cellular selectivity and only requires a single ultrasound treatment.</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Publications ---------------------------------------------------------------->
+					<div class="line" id="pubsline"></div>
+					<h2 class ="sect" id="meet">Featured Publications</h2>
+					<div class="container-fluid" id="pubs">
+					<div class="row" id="pubsrow">
+						<div class="column" id="pubscol">
+						  <div class="well">
+							<img src="img/monkey_thumb.jpg" class="img-responsive">
+							<h4>Neuromodulation of sensory networks in monkey brain by focused ultrasound with MRI guidance and detection</h3>
+							<h5>Scientific Reports (2018)</h4>
+							<h5>Pai-Feng Yang, M. Anthony Phipps, Allen T. Newton, Vandiver Chaplin, John C. Gore, Charles F. Caskey & Li Min Chen </h4>
+							<a href="https://www.nature.com/articles/s41598-018-26287-7" target="_blank">Go to Article</a>
+							<a href="#" data-toggle="modal" data-target="#monkeyModal">Show Abstract</a>
+						  </div>
+						</div>
+						
+						<div class="column" id="pubscol">
+							<div class="well">
+								<img src="img/imageThumb.jpg" class="img-responsive">
+								<h4>Fast, Low-Frequency Plane-Wave Imaging for Ultrasound Contrast Imaging</h3>
+								<h5>Ultrasound in Medicine and Biology (2018)</h4>
+								<h5>Jiro Kusunose, Charles F. Caskey</h4>
+								<a href="https://www.sciencedirect.com/science/article/pii/S0301562918302254" target="_blank">Go to Article</a>
+								<a href="#" data-toggle="modal" data-target="#imageModal">Show Abstract</a>
+							</div>
+						</div>
+						
+						<div class="column" id="pubscol">
+							<div class="well">
+								<img src="img/vanThumb.jpg" class="img-responsive">
+								<h4>A random phased-array for MR-guided transcranial ultrasound neuromodulation in non-human primates</h3>
+								<h5>Physics in Medicine and Biology (2018)</h4>
+								<h5>Vandiver Chaplin, Marshal A Phipps, Charles F Caskey</h4>
+								<a href="https://arxiv.org/ftp/arxiv/papers/1712/1712.07048.pdf" target="_blank">Go to Article</a>
+								<a href="#" data-toggle="modal" data-target="#vanModal">Show Abstract</a>
+							</div>
+						</div>
+					</div>
+
+					  
+					</div>
+					
+					<button type="button" class="btn btn-link"><a href="https://scholar.google.com/citations?hl=en&user=Acis3H4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Full list of pubs</a></button>
+					
+					<!--------------------------- Pop up for abstract ------------------------->
+					<div class="modal fade" id="monkeyModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header" style="background: #edd363">
+							<h3 class="modal-title" id="myModalLabel">Neuromodulation of sensory networks in monkey brain by focused ultrasound with MRI guidance and detection</h3>
+							<h4>Scientific Reports (2018)</h4>
+							<h4>Pai-Feng Yang, M. Anthony Phipps, Allen T. Newton, Vandiver Chaplin, John C. Gore, Charles F. Caskey & Li Min Chen </h4>
+						  </div>
+						  <div class="modal-body">
+								<p style="color:#000000">Focused ultrasound (FUS) has gained recognition as a technique for non-invasive neuromodulation with high spatial precision and the ability to both excite and inhibit neural activity. Here we demonstrate that MRI-guided FUS is capable of exciting precise targets within areas 3a/3b in the monkey brain, causing downstream activations in off-target somatosensory and associated brain regions which are simultaneously detected by functional MRI. The similarity between natural tactile stimulation-and FUS- evoked fMRI activation patterns suggests that FUS likely can excite populations of neurons and produce associated spiking activities that may be subsequently transmitted to other functionally related touch regions. The across-region differences in fMRI signal changes relative to area 3a/3b between tactile and FUS conditions also indicate that FUS modulated the tactile network differently. The significantly faster rising (>1 sec) fMRI signals elicited by direct FUS stimulation at the targeted cortical region suggest that a different neural hemodynamic coupling mechanism may be involved in generating fMRI signals. This is the first demonstration of imaging neural excitation effects of FUS with BOLD fMRI on a specific functional circuit in non-human primates.</p>
+							</div>
+						  <div class="modal-footer" style="background: #edd363;">
+							<img src="img/LATI_thumb.jpg" class="img-responsive" style="max-height: 50px; display: inline; position: absolute; left:10px; bottom:10px;">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-default"><a href="https://www.nature.com/articles/s41598-018-26287-7" target="_blank">Go to Article</a>
+								</button>
+							</div>
+						</div>
+					  </div>
+					</div>
+					
+					<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header" style="background: #edd363">
+							<h3 class="modal-title" id="myModalLabel">Fast, Low-Frequency Plane-Wave Imaging for Ultrasound Contrast Imaging</h3>
+							<h4>Ultrasound in Medicine and Biology (2018)</h4>
+							<h4>Jiro Kusunose, Charles F. Caskey</h4>
+						  </div>
+						  <div class="modal-body">
+								<p style="color:#000000">Plane-wave ultrasound contrast imaging offers a faster, less destructive means for imaging microbubbles compared with traditional ultrasound imaging. Even though many of the most acoustically responsive microbubbles have resonant frequencies in the lower-megahertz range, higher frequencies (>3 MHz) have typically been employed to achieve high spatial resolution. In this work we implement and optimize low-frequency (1.5-4 MHz) plane-wave pulse inversion imaging on a commercial, phased-array imaging transducer in vitro and illustrate its use in vivo by imaging a mouse xenograft model. We found that the 1.8-MHz contrast signal was about four times that acquired at 3.1 MHz on matched probes and nine times greater than echoes received on a higher-frequency probe. Low-frequency imaging was also much more resilient to motion. In vivo, we could identify sub-millimeter vasculature inside a xenograft tumor model and easily assess microbubble half-life. Our results indicate that low-frequency imaging can provide better signal-to-noise because it generates stronger non-linear responses. Combined with high-speed plane-wave imaging, this method could open the door to super-resolution imaging at depth, while high power pulses could be used for image-guided therapeutics.</p>
+								</div>
+						  <div class="modal-footer" style="background: #edd363">
+							<img src="img/LATI_thumb.jpg" class="img-responsive" style="max-height: 50px; display: inline; position: absolute; left:10px; bottom:10px;">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-default"><a href="https://www.sciencedirect.com/science/article/pii/S0301562918302254" target="_blank">Go to Article</a>
+								</button>
+							</div>
+						</div>
+					  </div>
+					</div>
+					
+					<div class="modal fade" id="vanModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header" style="background: #edd363">
+							<h3 class="modal-title" id="myModalLabel">A random phased-array for MR-guided transcranial ultrasound neuromodulation in non-human primates</h3>
+							<h4>Physics in Medicine and Biology (2018)</h4>
+							<h4>Vandiver Chaplin, Marshal A Phipps, Charles F Caskey</h4>
+						  </div>
+						  <div class="modal-body">
+								<p style="color:#000000">Transcranial focused ultrasound (FUS) is a non-invasive technique for therapy and study of brain neural activation. Here we report on the design and characterization of a new MR-guided FUS transducer for neuromodulation in non-human primates at 650kHz. The array is randomized with 128 elements, radius of curvature 7.2cm, and opening diameter 10.3cm (focal ratio 0.7). Simulations were used to optimize transducer geometry with respect to focus size, grating lobes, and directivity. Focus size and grating lobes during electronic steering were quantified using hydrophone measurements in water and a threeaxis stage. A novel combination of optical tracking and acoustic mapping enabled measurement of the 3D pressure distribution in the cortical region of an ex vivo skull to within ~3.5 mm of the surface, and allowed accurate modelling of the experiment via non-homogeneous 3D acoustic simulations. The data demonstrates acoustic focusing beyond the skull bone, with the focus slightly broadened and shifted proximal to the skull. The fabricated design is capable of targeting regions within the S1 sensorimotor cortex of macaques.</p>
+								</div>
+						  <div class="modal-footer" style="background: #edd363">
+							<img src="img/LATI_thumb.jpg" class="img-responsive" style="max-height: 50px; display: inline; position: absolute; left:10px; bottom:10px;">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-default"><a href="https://arxiv.org/ftp/arxiv/papers/1712/1712.07048.pdf" target="_blank">Go to Article</a>
+								</button>
+							</div>
+						</div>
+					  </div>
+					</div>					
+					
+					<!-- Meet the team ------------------------------------------------------>
+
+					<div class="line" id="teamline"></div>
+					<h2 class = "sect" id="meet">People</h2>
+					<!-- group photo -->
+					<img src="img/labphoto.png" style="width:100%;">
+					<div class="container-fluid" id="team">
+						<div class="row justify-content-center">
+						  <div class="column">
+							<div class="card">
+							  <img src="img/Caskey_squared.jpg" alt="Charles" style="width:214px; height:214px;">
+							  <div class="container">
+								<h4>Dr. Charles Caskey</h4>
+								<p class="title">Principal Investigator</p>
+								<p><button class="button" onclick="show_email(0)">Contact</button></p>
+							  </div>
+							</div>
+						  </div>
+						  <div class="column">
+							<div class="card">
+							  <img src="img/jiro_headshot.jpg" alt="Jiro" style="width:214px; height:214px;">
+							  <div class="container">
+								<h4>Jiro Kusunose</h4>
+								<p class="title">Staff Scientist</p>
+								<p><button class="button" onclick="show_email(1)">Contact</button></p>
+							  </div>
+							</div>
+						  </div>
+
+						  <div class="column">
+							<div class="card">
+							  <img src="img/phipps.jpg" alt="Tony" style="width:214px; height:214px;">
+							  <div class="container">
+								<h4>Tony (M. A.) Phipps</h4>
+								<p class="title">Graduate Student</p>
+								<p><button class="button" onclick="show_email(2)">Contact</button></p>
+							  </div>
+							</div>
+						  </div>
+
+						  <div class="column">
+							<div class="card">
+							  <img src="img/aparna.jpg" alt="Yixuan" style="width:214px; height:214px;">
+							  <div class="container">
+								<h4>Aparna Singh</h4>
+								<p class="title">Graduate Student</p>
+								<p><button class="button" onclick="show_email(3)">Contact</button></p>
+							  </div>
+							</div>
+						  </div>
+
+						  <div class="column">
+							<div class="card">
+							  <img src="img/tom.png" alt="Yixuan" style="width:214px; height:214px;">
+							  <div class="container">
+								<h4>Tom Manuel</h4>
+								<p class="title">Graduate Student</p>
+								<p><button class="button" onclick="show_email(4)">Contact</button></p>
+							  </div>
+							</div>
+						  </div>
+
+						  <div class="column">
+							<div class="card">
+							  <img src="img/sigona.jpg" alt="Michelle" style="width:214px; height:214px;">
+							  <div class="container">
+								<h4>Michelle Sigona</h4>
+								<p class="title">Graduate Student</p>
+								<p><button class="button" onclick="show_email(5)">Contact</button></p>
+							  </div>
+							</div>
+						  </div>
+
+						  <div class="column">
+							<div class="card">
+							  <img src="img/connor.jpg" alt="Connor" style="width:214px; height:214px;">
+							  <div class="container">
+								<h4>Connor Krolak</h4>
+								<p class="title">Undergraduate Student</p>
+								<p><button class="button" onclick="show_email(6)">Contact</button></p>
+							  </div>
+							</div>
+						  </div>
+						  
+						  <div class="column">
+							<div class="card">
+							  <img src="img/emrich.jpg" alt="Jake" style="width:214px; height:214px;">
+							  <div class="container">
+								<h4>Jake Emrich</h4>
+								<p class="title">Undergraduate Student</p>
+								<p><button class="button" onclick="show_email(7)">Contact</button></p>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					</div>
+					
+					<!-- here is the resources section-->
+					<div class="line" id="res_line"></div>
+					
+					<h2 class = "sect" id="resources">Resources</h2>
+					<div class="container-fluid" id="team">
+						<div class="row justify-content-center">
+						  <div class="column"><a href="http://www.k-wave.org/" target="_blank">
+							<div class="card">
+							  <img src="img/kwave.png" style="width:218px; height:214px;">
+							  <div class="container">
+								<h4>Kwave</h4>	
+								<p class="title">Simulation toolbox</p>
+							  </div>
+							</div>
+						  </div></a>
+						</div>
+					</div>
+					
+					<!-- here is the Opportunities section-->
+					<div class="line" id="opp_line"></div>
+					<h2 class = "sect" id="meet">Opportunities</h2>
+					<div class="container-fluid" id="project">
+						<div class="row">
+							<div class="column" id="ctext">
+								<p style="text-align:justify">We are currently seeking motivated imaging scientists at the graduate student and postdoctoral levels who wish to work at the intersection of MRgFUS, drug delivery, and neuroscience. Interested individuals can contact <a href="mailto:charles.f.caskey@vanderbilt.edu">Charles Caskey</a>.</p>
+							</div>
+						</div>
+					</div>
+				  </div>
+				</div>
+			</div>
+        </div>
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- jQuery Custom Scroller CDN -->
+		<script src="jquery.mCustomScrollbar.js"></script>
+        <!--script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script-->
+		<!--script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script-->
+		<script src="scrollreveal.js"></script>
+		<script src="jquery.scrollTo.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+			
+			function tog_nav() {
+				var x = document.getElementById('whole-page');
+				if (x.style.display === "none") {
+					x.style.display = "block";
+				} else {
+					x.style.display = "none";
+				}
+			};
+			
+			function hideshit(id) {
+				var x = document.getElementById(id);
+				if (x.style.display === "none") {
+					x.style.display = "block";
+				} else {
+					x.style.display = "none";
+				}
+			};
+			
+			function navigate(id, ind) {
+				var x = document.getElementById('whole-page');
+				if (x.style.display === "none") {
+					x.style.display = "block";
+					$('#sidebar, #content').toggleClass('active');
+					$('.collapse.in').toggleClass('in');
+					$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+					if (ind === 10){
+						pos = '0px';
+						} else { 
+						pos = Math.round(loc[ind]) + 'px';
+						}
+					$.scrollTo({top: pos, left:'0px'},800);
+				} else {
+					$.scrollTo(id,800,{axis:'y'});
+				}
+				clearDot();
+				var elements = ["h", "r", "p", "t","r2","o"]
+				document.getElementById(elements[ind]).style.display = "inline";
+			};
+
+			
+			function getLocations(){
+				var elements = ["cover","projectline", "pubsline", "teamline", "res_line", "opp_line"];
+				var loc = [];
+				var pos = window.pageYOffset;
+				for (i in elements) {
+					var element = document.getElementById(elements[i]);
+					elemRect = element.getBoundingClientRect();
+					loc[i] = elemRect.top + pos;
+				}
+				return loc;
+			};
+			
+			function clearDot(){
+				var elements = ["h", "r", "p", "t","r2","o"]
+				for (i in elements){
+					document.getElementById(elements[i]).style.display = "none";
+				}
+			};
+			
+			
+			function checkLoc(){
+				var pos = window.pageYOffset;
+				pos = pos + 300;
+				clearDot();
+				var elements = ['h', 'r', 'p', 't','r2','o'];
+				
+				<!-- get closest element -->
+				var ind = closest(pos,loc);
+				
+				document.getElementById(elements[ind]).style.display = "inline";
+				
+			}
+			
+			function show_email(pers){
+			em_ad = em_list[pers];
+				alert(em_ad);
+			}
+			
+			function closest (num, arr) {
+                var curr = arr[0];
+                var diff = Math.abs (num - curr);
+				var ind = 0;
+                for (var val = 0; val < arr.length; val++) {
+                    var newdiff = Math.abs (num - arr[val]);
+                    if (newdiff < diff) {
+                        diff = newdiff;
+                        curr = arr[val];
+						ind = val
+                    }
+                }
+                return ind;
+            }
+
+		window.sr = ScrollReveal();
+		sr.reveal('.line');
+		sr.reveal('.container-fluid');
+		sr.reveal('.sect');
+		
+		loc = getLocations();
+		clearDot();
+		checkLoc();
+		em_list = ['charles.f.caskey@vumc.org', 'jiro.kusunose@vanderbilt.edu ', 'tony.phipps@vanderbilt.edu ', 'aparna.singh@vanderbilt.edu', 'thomas.j.manuel@vanderbilt.edu','mksigona@gmail.com','connor.krolak@vanderbilt.edu','jake.r.emrich@vanderbilt.edu'];
+		
+        </script>
+    </body>
+</html>
